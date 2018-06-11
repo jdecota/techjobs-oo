@@ -2,6 +2,9 @@ package org.launchcode.models.forms;
 
 import org.launchcode.models.JobFieldType;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 /**
  * Created by LaunchCode
  */
@@ -11,9 +14,12 @@ public class SearchForm {
     private JobFieldType[] fields = JobFieldType.values();
 
     // The selected search options
+
     private JobFieldType searchField = JobFieldType.ALL;
 
     // The search string
+//    @NotNull
+//    @Size(min=1, message = "No Results Found")
     private String keyword;
 
     public JobFieldType getSearchField() {
